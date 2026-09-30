@@ -13,5 +13,15 @@
         "id": "rev-03",
         "categorie": "Réformes Pédagogiques",
         "description": "Contestation des modalités de sélection en Master et demande de révision des critères Parcoursup."
+    },
+    {
+        "id": "rev-04",
+        "categorie": "Manque de moyens et d'effectifs",
+        "description": "Dénonciation des classes surchargées, du non-remplacement des professeurs et du manque critique d'infirmières scolaires et d'AESH."
+    },
+    {
+        "id": "rev-05",
+        "categorie": "Sélection et Parcoursup",
+        "description": "Contestation du système d'admission post-bac suite au record de 126 000 candidats sans affectation et à l'effet de saturation des listes d'attente."
     }
 ]

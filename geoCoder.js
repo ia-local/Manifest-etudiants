@@ -1,4 +1,10 @@
-[
+// geocoder.js - À exécuter avec Node.js (ex: node geocoder.js)
+// Nécessite Node.js v18+ pour l'API fetch native
+
+const fs = require('fs');
+
+// Votre liste brute récupérée (exemple)
+const etablissementsBruts = [
     {
         "id": "par-01",
         "ville": "Paris",
@@ -314,5 +320,56 @@
             "2026-10-06": null
         },
         "source": "Actu Morbihan (Vidéo)"
+    },
+];
+
+async function geocodeAndGenerateJSON() {
+    const mapData = [];
+
+    for (let i = 0; i < etablissementsBruts.length; i++) {
+        const item = etablissementsBruts[i];
+        const query = encodeURIComponent(`${item.nom}, ${item.ville}, France`);
+        
+        console.log(`Recherche des coordonnées pour : ${item.nom} (${item.ville})...`);
+        
+        try {
+            // Appel à l'API gratuite Nominatim (OpenStreetMap)
+            const response = await fetch(`https://nominatim.openstreetmap.org/search?q=${query}&format=json&limit=1`, {
+                headers: { 'User-Agent': 'Script-Veille-Mouvements-Etudiants/1.0' }
+            });
+            const data = await response.json();
+
+            if (data.length > 0) {
+                mapData.push({
+                    id: `${item.ville.substring(0,3).toLowerCase()}-${Date.now().toString().slice(-4)}-${i}`,
+                    ville: item.ville,
+                    etablissement: item.nom,
+                    type: item.type,
+                    statut: item.statut,
+                    lat: parseFloat(data[0].lat),
+                    lng: parseFloat(data[0].lon),
+                    historique_mobilisation: {
+                        "2026-09-29": item.effectif,
+                        "2026-10-01": null,
+                        "2026-10-06": null
+                    },
+                    source: "Agrégation syndicale"
+                });
+            } else {
+                console.warn(`⚠️ Coordonnées non trouvées pour : ${item.nom}`);
+            }
+
+            // Pause de 1.5s obligatoire pour ne pas se faire bloquer par l'API gratuite d'OSM
+            await new Promise(resolve => setTimeout(resolve, 1500));
+
+        } catch (error) {
+            console.error(`Erreur sur ${item.nom}:`, error);
+        }
     }
-]
+
+    // Écriture du fichier final
+    fs.writeFileSync('map_genere.json', JSON.stringify(mapData, null, 4));
+    console.log('✅ Fichier map_genere.json créé avec succès ! Vous pouvez le fusionner avec map.json.');
+}
+
+geocodeAndGenerateJSON();
