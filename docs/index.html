@@ -5,14 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Suivi des mouvements étudiants - Tableau de bord</title>
     
-    <!-- CSS Système de Design de l'État (DSFR) -->
     <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.min.css">
     <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/utility/utility.min.css">
-    
-    <!-- CSS Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    
-    <!-- CSS Local -->
     <link rel="stylesheet" href="style-dsfr.css">
 </head>
 <body>
@@ -71,13 +66,13 @@
                     <div class="fr-col-12 fr-col-md-3">
                         <div class="fr-card fr-card--no-border metric-card fr-background-alt--orange-terre-battue">
                             <div class="metric-number" style="color: #e4794a;">32</div>
-                            <div class="metric-label">Éducation Nationale (blessés)</div>
+                            <div class="metric-label">Éducation Nationale</div>
                         </div>
                     </div>
                     <div class="fr-col-12 fr-col-md-3">
                         <div class="fr-card fr-card--no-border metric-card fr-background-alt--blue-france">
                             <div class="metric-number">83</div>
-                            <div class="metric-label">Forces de l'Ordre (blessés)</div>
+                            <div class="metric-label">Forces de l'Ordre</div>
                         </div>
                     </div>
                 </div>
@@ -129,8 +124,26 @@
                         </div>
                         <div class="fr-modal__content">
                             <h1 id="modal-title" class="fr-modal__title">Nom du lieu</h1>
-                            <p><strong>Statut actuel :</strong> <span id="modal-status" class="fr-badge fr-badge--warning"></span></p>
-                            <p><strong>Effectif manifestant estimé :</strong> <span id="modal-manifestants"></span></p>
+                            <p>
+                                <strong>Type :</strong> <span id="modal-type" class="fr-badge fr-badge--info"></span><br>
+                                <strong>Statut actuel :</strong> <span id="modal-status" class="fr-badge fr-badge--warning"></span>
+                            </p>
+                            
+                            <!-- Nouveau tableau pour l'historique -->
+                            <h3 class="fr-h6 fr-mt-4w">Historique de mobilisation</h3>
+                            <div class="fr-table fr-table--bordered">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Effectif estimé</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="modal-historique-body">
+                                        <!-- Rempli par modal.js -->
+                                    </tbody>
+                                </table>
+                            </div>
                             
                             <div class="fr-input-group fr-mt-4w">
                                 <label class="fr-label" for="notes-terrain">Notes de suivi (local)</label>
@@ -146,13 +159,11 @@
         </div>
     </dialog>
 
-    <!-- Scripts DSFR -->
     <script type="module" src="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.module.min.js"></script>
     <script type="text/javascript" nomodule src="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.nomodule.min.js"></script>
-    <!-- Script Leaflet -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <!-- Script Local -->
-     <button id="hidden-modal-trigger" aria-controls="fr-modal-lieux" data-fr-opened="false" style="display: none;"></button>
+    
+    <button id="hidden-modal-trigger" aria-controls="fr-modal-lieux" data-fr-opened="false" style="display: none;"></button>
     <script type="module" src="script.js"></script>
 </body>
 </html>

@@ -3,36 +3,236 @@
         "id": "par-01",
         "ville": "Paris",
         "etablissement": "Université Paris 1 Panthéon-Sorbonne",
+        "type": "Université",
         "statut": "Bloqué",
         "lat": 48.8471,
         "lng": 2.3435,
-        "manifestants": 3500
+        "historique_mobilisation": {
+            "2026-09-29": 3500,
+            "2026-10-01": null,
+            "2026-10-06": null
+        }
     },
     {
-        "id": "ren-01",
-        "ville": "Rennes",
-        "etablissement": "Université Rennes 2",
+        "id": "ssd-01",
+        "ville": "Saint-Denis",
+        "etablissement": "Université Paris 8 Vincennes - Saint-Denis",
+        "type": "Université",
         "statut": "Filtrant",
-        "lat": 48.1197,
-        "lng": -1.7013,
-        "manifestants": 1200
+        "lat": 48.9452,
+        "lng": 2.3639,
+        "historique_mobilisation": {
+            "2026-09-29": 2200,
+            "2026-10-01": null,
+            "2026-10-06": null
+        }
+    },
+    {
+        "id": "ssd-02",
+        "ville": "Montreuil",
+        "etablissement": "Lycée Jean Jaurès",
+        "type": "Lycée",
+        "statut": "Tensions signalées - Intervention FDO",
+        "lat": 48.8653,
+        "lng": 2.4456,
+        "historique_mobilisation": {
+            "2026-09-29": 650,
+            "2026-10-01": null,
+            "2026-10-06": null
+        }
+    },
+    {
+        "id": "ssd-03",
+        "ville": "Aubervilliers",
+        "etablissement": "Lycée Henri Wallon",
+        "type": "Lycée",
+        "statut": "Blocage partiel",
+        "lat": 48.9131,
+        "lng": 2.3822,
+        "historique_mobilisation": {
+            "2026-09-29": 400,
+            "2026-10-01": null,
+            "2026-10-06": null
+        }
     },
     {
         "id": "lyo-01",
         "ville": "Lyon",
         "etablissement": "Université Lumière Lyon 2",
+        "type": "Université",
         "statut": "Bloqué",
         "lat": 45.7483,
         "lng": 4.8361,
-        "manifestants": 2000
+        "historique_mobilisation": {
+            "2026-09-29": 4200,
+            "2026-10-01": null,
+            "2026-10-06": null
+        }
     },
     {
-        "id": "bor-01",
-        "ville": "Bordeaux",
-        "etablissement": "Université Bordeaux Montaigne",
-        "statut": "Manifestation en cours",
-        "lat": 44.7938,
-        "lng": -0.6152,
-        "manifestants": 1500
+        "id": "lyo-02",
+        "ville": "Lyon",
+        "etablissement": "Lycée Ampère",
+        "type": "Lycée",
+        "statut": "Manifestation devant les grilles",
+        "lat": 45.7634,
+        "lng": 4.8367,
+        "historique_mobilisation": {
+            "2026-09-29": 800,
+            "2026-10-01": null,
+            "2026-10-06": null
+        }
+    },
+    {
+        "id": "lil-01",
+        "ville": "Lille",
+        "etablissement": "Lycée Fénelon",
+        "type": "Lycée",
+        "statut": "Bloqué",
+        "lat": 50.6264,
+        "lng": 3.0640,
+        "historique_mobilisation": {
+            "2026-09-29": 800,
+            "2026-10-01": null,
+            "2026-10-06": null
+        }
+    },
+    {
+        "id": "lil-02",
+        "ville": "Lille",
+        "etablissement": "Lycée Baggio",
+        "type": "Lycée",
+        "statut": "Bloqué - Tensions signalées",
+        "lat": 50.6133,
+        "lng": 3.0658,
+        "historique_mobilisation": {
+            "2026-09-29": 750,
+            "2026-10-01": null,
+            "2026-10-06": null
+        }
+    },
+    {
+        "id": "lil-03",
+        "ville": "Lille",
+        "etablissement": "Lycée Montebello",
+        "type": "Lycée",
+        "statut": "Bloqué - Incendie et intervention pompiers/FDO",
+        "lat": 50.6190,
+        "lng": 3.0375,
+        "historique_mobilisation": {
+            "2026-09-29": 600,
+            "2026-10-01": null,
+            "2026-10-06": null
+        }
+    },
+    {
+        "id": "lil-04",
+        "ville": "Lille",
+        "etablissement": "Lycée Pasteur",
+        "type": "Lycée",
+        "statut": "Bloqué",
+        "lat": 50.6385,
+        "lng": 3.0722,
+        "historique_mobilisation": {
+            "2026-09-29": 500,
+            "2026-10-01": null,
+            "2026-10-06": null
+        }
+    },
+    {
+        "id": "ren-02",
+        "ville": "Rennes",
+        "etablissement": "Lycée Coëtlogon",
+        "type": "Lycée",
+        "statut": "Bloqué - Saccage de l'accueil, affrontements FDO",
+        "lat": 48.1250,
+        "lng": -1.7020,
+        "historique_mobilisation": {
+            "2026-09-29": 0,
+            "2026-09-30": 300,
+            "2026-10-01": null,
+            "2026-10-06": null
+        },
+        "source": "Le Télégramme"
+    },
+    {
+        "id": "ren-03",
+        "ville": "Rennes",
+        "etablissement": "Université Rennes 2 (Campus Villejean)",
+        "type": "Université",
+        "statut": "Bloqué - Suspension des activités",
+        "lat": 48.1197,
+        "lng": -1.7013,
+        "historique_mobilisation": {
+            "2026-09-29": 0,
+            "2026-09-30": 2000,
+            "2026-10-01": null,
+            "2026-10-06": null
+        },
+        "source": "Rennes Infos Autrement"
+    },
+    {
+        "id": "tou-01",
+        "ville": "Toulouse",
+        "etablissement": "Lycée des Arènes",
+        "type": "Lycée",
+        "statut": "Bloqué - Intervention FDO (Gaz lacrymogène)",
+        "lat": 43.5900,
+        "lng": 1.4150,
+        "historique_mobilisation": {
+            "2026-09-29": 0,
+            "2026-09-30": 400,
+            "2026-10-01": null,
+            "2026-10-06": null
+        },
+        "source": "Réseaux sociaux / Presse locale"
+    },
+    {
+        "id": "mon-01",
+        "ville": "Montbéliard",
+        "etablissement": "Lycée Germaine Tillion",
+        "type": "Lycée",
+        "statut": "Blocus et rassemblement",
+        "lat": 47.5098,
+        "lng": 6.8043,
+        "historique_mobilisation": {
+            "2026-09-29": 200,
+            "2026-09-30": null,
+            "2026-10-01": null,
+            "2026-10-06": null
+        },
+        "source": "Salade2Montbe"
+    },
+    {
+        "id": "cre-01",
+        "ville": "Créteil",
+        "etablissement": "Lycée Saint-Exupéry",
+        "type": "Lycée",
+        "statut": "Blocus et tensions signalées",
+        "lat": 48.7904,
+        "lng": 2.4552,
+        "historique_mobilisation": {
+            "2026-09-29": 300,
+            "2026-09-30": null,
+            "2026-10-01": null,
+            "2026-10-06": null
+        },
+        "source": "Le Nouveau Détective"
+    },
+    {
+        "id": "ssd-04",
+        "ville": "Saint-Denis",
+        "etablissement": "Lycée Paul Éluard",
+        "type": "Lycée",
+        "statut": "Blocus",
+        "lat": 48.9405,
+        "lng": 2.3556,
+        "historique_mobilisation": {
+            "2026-09-29": 400,
+            "2026-09-30": null,
+            "2026-10-01": null,
+            "2026-10-06": null
+        },
+        "source": "France 24"
     }
 ]
