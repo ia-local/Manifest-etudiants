@@ -1,0 +1,17 @@
+[
+    {
+        "id": "rev-01",
+        "categorie": "Précarité Étudiante",
+        "description": "Demande de gel des loyers CROUS, réévaluation des bourses sur critères sociaux et généralisation du repas à 1€."
+    },
+    {
+        "id": "rev-02",
+        "categorie": "Infrastructures",
+        "description": "Dénonciation de la vétusté de certains campus et demande de plans d'investissement d'urgence pour la rénovation thermique."
+    },
+    {
+        "id": "rev-03",
+        "categorie": "Réformes Pédagogiques",
+        "description": "Contestation des modalités de sélection en Master et demande de révision des critères Parcoursup."
+    }
+]

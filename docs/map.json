@@ -1,0 +1,38 @@
+[
+    {
+        "id": "par-01",
+        "ville": "Paris",
+        "etablissement": "Université Paris 1 Panthéon-Sorbonne",
+        "statut": "Bloqué",
+        "lat": 48.8471,
+        "lng": 2.3435,
+        "manifestants": 3500
+    },
+    {
+        "id": "ren-01",
+        "ville": "Rennes",
+        "etablissement": "Université Rennes 2",
+        "statut": "Filtrant",
+        "lat": 48.1197,
+        "lng": -1.7013,
+        "manifestants": 1200
+    },
+    {
+        "id": "lyo-01",
+        "ville": "Lyon",
+        "etablissement": "Université Lumière Lyon 2",
+        "statut": "Bloqué",
+        "lat": 45.7483,
+        "lng": 4.8361,
+        "manifestants": 2000
+    },
+    {
+        "id": "bor-01",
+        "ville": "Bordeaux",
+        "etablissement": "Université Bordeaux Montaigne",
+        "statut": "Manifestation en cours",
+        "lat": 44.7938,
+        "lng": -0.6152,
+        "manifestants": 1500
+    }
+]

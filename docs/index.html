@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr" data-fr-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Suivi des mouvements étudiants - Tableau de bord</title>
+    
+    <!-- CSS Système de Design de l'État (DSFR) -->
+    <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/utility/utility.min.css">
+    
+    <!-- CSS Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    
+    <!-- CSS Local -->
+    <link rel="stylesheet" href="style-dsfr.css">
+</head>
+<body>
+
+    <header role="banner" class="fr-header">
+        <div class="fr-header__body">
+            <div class="fr-container">
+                <div class="fr-header__body-row">
+                    <div class="fr-header__brand fr-enlarge-link">
+                        <div class="fr-header__brand-top">
+                            <div class="fr-header__logo">
+                                <p class="fr-logo">République<br>Française</p>
+                            </div>
+                        </div>
+                        <div class="fr-header__service">
+                            <a href="/" title="Accueil - Tableau de bord de suivi">
+                                <p class="fr-header__service-title">Cellule de Veille et de Suivi</p>
+                            </a>
+                            <p class="fr-header__service-tagline">Rapport de situation des mouvements étudiants</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main role="main" id="contenu">
+        <div class="fr-container fr-mt-6w fr-mb-6w">
+            
+            <div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
+                <div class="fr-col-12">
+                    <h1 class="fr-h1">Point de situation national</h1>
+                    <div class="fr-alert fr-alert--warning fr-mb-4w">
+                        <h3 class="fr-alert__title">Avertissement</h3>
+                        <p>Situation tendue : 119 étudiants blessés, 32 membres de l'Éducation Nationale et 83 membres des FDO. (Données BFM TV)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bilan chiffré -->
+            <section aria-labelledby="titre-chiffres-cles">
+                <h2 id="titre-chiffres-cles" class="fr-h2">Bilan chiffré provisoire</h2>
+                <div class="fr-grid-row fr-grid-row--gutters fr-mb-6w">
+                    <div class="fr-col-12 fr-col-md-3">
+                        <div class="fr-card fr-card--no-border metric-card fr-background-alt--grey">
+                            <div class="metric-number">356</div>
+                            <div class="metric-label">Établissements concernés</div>
+                        </div>
+                    </div>
+                    <div class="fr-col-12 fr-col-md-3">
+                        <div class="fr-card fr-card--no-border metric-card fr-background-alt--red-marianne">
+                            <div class="metric-number" style="color: #c9191e;">119</div>
+                            <div class="metric-label">Étudiants blessés</div>
+                        </div>
+                    </div>
+                    <div class="fr-col-12 fr-col-md-3">
+                        <div class="fr-card fr-card--no-border metric-card fr-background-alt--orange-terre-battue">
+                            <div class="metric-number" style="color: #e4794a;">32</div>
+                            <div class="metric-label">Éducation Nationale (blessés)</div>
+                        </div>
+                    </div>
+                    <div class="fr-col-12 fr-col-md-3">
+                        <div class="fr-card fr-card--no-border metric-card fr-background-alt--blue-france">
+                            <div class="metric-number">83</div>
+                            <div class="metric-label">Forces de l'Ordre (blessés)</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cartographie -->
+            <section aria-labelledby="titre-cartographie" class="fr-mb-6w">
+                <h2 id="titre-cartographie" class="fr-h2">Cartographie et Lieux</h2>
+                <div id="map" class="fr-mb-4w"></div>
+                
+                <div class="fr-table fr-table--bordered" id="table-lieux">
+                    <table>
+                        <caption>Liste des établissements (Cliquez sur la carte pour les détails)</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Ville</th>
+                                <th scope="col">Établissement</th>
+                                <th scope="col">Statut</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Rempli par script.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Revendications -->
+            <section aria-labelledby="titre-revendications" class="fr-mb-6w">
+                <h2 id="titre-revendications" class="fr-h2">Analyse des Revendications</h2>
+                <div class="fr-grid-row fr-grid-row--gutters">
+                    <div class="fr-col-12 fr-col-md-8" id="revendications-list">
+                        <!-- Rempli par script.js -->
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Modale DSFR pour le détail d'un lieu -->
+    <dialog aria-labelledby="modal-title" id="fr-modal-lieux" class="fr-modal" role="dialog">
+        <div class="fr-container fr-container--fluid fr-container-md">
+            <div class="fr-grid-row fr-grid-row--center">
+                <div class="fr-col-12 fr-col-md-8 fr-col-lg-6">
+                    <div class="fr-modal__body">
+                        <div class="fr-modal__header">
+                            <button class="fr-btn--close fr-btn" title="Fermer la fenêtre modale" aria-controls="fr-modal-lieux">Fermer</button>
+                        </div>
+                        <div class="fr-modal__content">
+                            <h1 id="modal-title" class="fr-modal__title">Nom du lieu</h1>
+                            <p><strong>Statut actuel :</strong> <span id="modal-status" class="fr-badge fr-badge--warning"></span></p>
+                            <p><strong>Effectif manifestant estimé :</strong> <span id="modal-manifestants"></span></p>
+                            
+                            <div class="fr-input-group fr-mt-4w">
+                                <label class="fr-label" for="notes-terrain">Notes de suivi (local)</label>
+                                <textarea class="fr-input" id="notes-terrain" name="notes-terrain" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <div class="fr-modal__footer">
+                            <button class="fr-btn" id="btn-save-notes" aria-controls="fr-modal-lieux">Enregistrer et fermer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Scripts DSFR -->
+    <script type="module" src="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.module.min.js"></script>
+    <script type="text/javascript" nomodule src="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.nomodule.min.js"></script>
+    <!-- Script Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Script Local -->
+     <button id="hidden-modal-trigger" aria-controls="fr-modal-lieux" data-fr-opened="false" style="display: none;"></button>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
