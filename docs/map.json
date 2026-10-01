@@ -447,5 +447,22 @@
             "2026-10-06": null
         },
         "source": "Actu Morbihan (Vidéo)"
+    },
+    {
+        "id": "gre-01",
+        "ville": "Grenoble",
+        "etablissement": "Lycées de Grenoble (Rassemblement)",
+        "type": "Lycée",
+        "statut": "Affrontements et interpellations signalés",
+        "lat": 45.1885,
+        "lng": 5.7245,
+        "historique_mobilisation": {
+            "2026-09-29": 400,
+            "2026-09-30": null,
+            "2026-10-01": null,
+            "2026-10-06": null
+        },
+        "source": "Réseaux sociaux (Vidéo Facebook)",
+        "video_url": "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1EfQpCoRwj%2F&show_text=false"
     }
 ]
