@@ -29,5 +29,20 @@
         "categorie": "Restauration universitaire et pouvoir d'achat",
         "description": "Revendication d'un repas à 1€ pérennisé pour tous les niveaux de scolarité et adaptation immédiate des infrastructures (Restos U) pour pallier l'engorgement massif observé (files d'attente de plus de 45 minutes).",
         "source": "Témoignages étudiants (Caen) - Sept. 2026"
+    },
+    {
+        "id": "rev-07",
+        "categorie": "Justice et Police",
+        "description": "Exigence de dissolution de l'IGPN, dont l'impartialité est contestée, et dénonciation des interventions policières jugées musclées face aux blocus."
+    },
+    {
+        "id": "rev-08",
+        "categorie": "Infrastructures et Apprentissage",
+        "description": "Demande d'établissements dignes (chauffés et climatisés), de classes moins chargées et de la fin de la journée standardisée 8h-18h."
+    },
+    {
+        "id": "rev-09",
+        "categorie": "Entrepreneuriat et Petite Enfance",
+        "description": "Baisse des taxes pour les jeunes créateurs d'entreprise et réorientation du budget vers la petite enfance (en s'appuyant sur les travaux économiques de James Heckman)."
     }
 ]
