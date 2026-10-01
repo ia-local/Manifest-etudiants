@@ -464,5 +464,22 @@
         },
         "source": "Réseaux sociaux / Tractage local",
         "video_url": "./videos/discours_mounier_grenoble.mp4" 
-    }
+    },
+    {
+    "id": "val-01",
+    "ville": "Saint-Ouen-l'Aumône",
+    "etablissement": "Lycée professionnel Château d'Épluches",
+    "type": "Lycée",
+    "statut": "Bloqué - Incident grave (Tir de lanceur Cougar)",
+    "lat": 49.0438,
+    "lng": 2.1102,
+    "historique_mobilisation": {
+        "2026-09-28": "Incident grave, blessure par tir",
+        "2026-09-29": null,
+        "2026-09-30": null,
+        "2026-10-01": null
+    },
+    "source": "Vidéos réseaux sociaux / 20 Minutes France",
+    "video_url": "https://www.youtube.com/embed/e5bVBkJc0Nc"
+}
 ]
