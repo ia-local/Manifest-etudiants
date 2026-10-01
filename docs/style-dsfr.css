@@ -1,3 +1,94 @@
+/* =========================================================
+   MODE MOBILE-FIRST : BOTTOM NAVIGATION BAR (< 992px)
+   ========================================================= */
+
+/* Dégage de l'espace en bas de page pour que le contenu ne glisse pas sous le menu */
+body {
+    padding-bottom: 70px; 
+}
+
+@media (max-width: 991px) {
+    /* Extraction et fixation du menu en bas de l'écran */
+    #modal-menu {
+        display: block !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        top: auto;
+        background-color: #fff;
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.08);
+        z-index: 9999;
+        visibility: visible !important;
+        opacity: 1 !important;
+        padding: 0;
+    }
+
+    /* Masquage des éléments inutiles (bouton fermer, voile noir d'arrière-plan) */
+    #modal-menu .fr-btn--close,
+    #modal-menu::before,
+    #modal-menu::after {
+        display: none !important;
+    }
+
+    #modal-menu .fr-container {
+        padding: 0;
+    }
+
+    /* Disposition des boutons en ligne homogène (Tab bar) */
+    #navigation-principale .fr-nav__list {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+    }
+
+    #navigation-principale .fr-nav__item {
+        flex: 1;
+        text-align: center;
+    }
+
+    /* Style des boutons pour le pouce : icône en haut, texte réduit en bas */
+    #navigation-principale .fr-nav__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 0.25rem;
+        font-size: 0.65rem;
+        line-height: 1.1;
+        color: #161616;
+        box-shadow: none; /* Annule la bordure latérale DSFR par défaut */
+        height: 100%;
+    }
+    
+    /* Repositionnement de l'icône au centre */
+    #navigation-principale .fr-nav__link::before {
+        margin-right: 0 !important;
+        margin-bottom: 0.25rem;
+        font-size: 1.2rem;
+    }
+
+    /* Indicateur d'onglet actif (page courante) */
+    #navigation-principale .fr-nav__link[aria-current="page"] {
+        color: #000091; /* Bleu France */
+        font-weight: bold;
+        background-color: #f5f5fe;
+        box-shadow: inset 0 3px 0 0 #000091; /* Soulignement par le haut */
+    }
+}
+
+/* =========================================================
+   DESKTOP : RÉTABLISSEMENT DU HEADER DSFR (>= 992px)
+   ========================================================= */
+@media (min-width: 992px) {
+    body {
+        padding-bottom: 0;
+    }
+    /* La modale reprend son comportement header normal nativement géré par le DSFR */
+}
+
 .metric-card {
     text-align: center;
     padding: 2rem 1rem;

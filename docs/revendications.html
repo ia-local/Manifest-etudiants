@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr" data-fr-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cahier des Revendications - Cellule de Veille</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/utility/utility.min.css">
+    <link rel="stylesheet" href="style-dsfr.css">
+</head>
+<body>
+
+    <header role="banner" class="fr-header">
+        <div class="fr-header__body">
+            <div class="fr-container">
+                <div class="fr-header__body-row">
+                    <div class="fr-header__brand fr-enlarge-link">
+                        <div class="fr-header__brand-top">
+                            <div class="fr-header__logo">
+                                <p class="fr-logo">République<br>Française</p>
+                            </div>
+                        </div>
+                        <div class="fr-header__service">
+                            <a href="index.html" title="Accueil - Tableau de bord de suivi">
+                                <p class="fr-header__service-title">Cellule de Veille et de Suivi</p>
+                            </a>
+                            <p class="fr-header__service-tagline">Portail citoyen d'information et de défense légale</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Menu de navigation Mobile-First -->
+        <div class="fr-header__menu fr-modal" id="modal-menu" aria-labelledby="button-menu">
+            <div class="fr-container">
+                <button class="fr-btn--close fr-btn" aria-controls="modal-menu">Fermer</button>
+                <div class="fr-header__menu-links"></div>
+                <nav class="fr-nav" id="navigation-principale" role="navigation" aria-label="Menu principal">
+                    <ul class="fr-nav__list">
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-home-4-fill fr-link--icon-left" href="index.html" target="_self" aria-current="page">Accueil</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-map-pin-2-fill fr-link--icon-left" href="map.html" target="_self">Carte</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-draft-fill fr-link--icon-left" href="revendications.html" target="_self">Cahier</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-scales-3-fill fr-link--icon-left" href="justice.html" target="_self">Justice</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-eye-fill fr-link--icon-left" href="observatoire.html" target="_self">Veille</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main role="main" id="contenu">
+        <div class="fr-container fr-mt-6w fr-mb-6w">
+            
+            <div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
+                <div class="fr-col-12">
+                    <h1 class="fr-h1">Cahier national des revendications</h1>
+                    <p class="fr-text--lead">Synthèse des doléances exprimées lors des Assemblées Générales, des blocages et des discours sur le terrain. Cliquez sur une revendication pour proposer une solution.</p>
+                </div>
+            </div>
+
+            <!-- Conteneur pour la grille dynamique JSON -->
+            <div class="fr-grid-row fr-grid-row--gutters" id="revendications-grid">
+                <!-- Rempli par revendications-script.js -->
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modale DSFR pour le détail d'une revendication et la proposition de solution -->
+    <dialog aria-labelledby="modal-rev-title" id="fr-modal-revendication" class="fr-modal" role="dialog">
+        <div class="fr-container fr-container--fluid fr-container-md">
+            <div class="fr-grid-row fr-grid-row--center">
+                <div class="fr-col-12 fr-col-md-8 fr-col-lg-8">
+                    <div class="fr-modal__body">
+                        <div class="fr-modal__header">
+                            <button class="fr-btn--close fr-btn" title="Fermer la fenêtre modale" aria-controls="fr-modal-revendication">Fermer</button>
+                        </div>
+                        
+                        <div class="fr-modal__content">
+                            <!-- Présentation de la revendication -->
+                            <h1 id="modal-rev-title" class="fr-modal__title">Titre de la revendication</h1>
+                            <div class="fr-callout fr-mb-4w">
+                                <p class="fr-callout__text" id="modal-rev-desc">Description complète de la revendication issue du terrain.</p>
+                                <p class="fr-text--sm fr-mt-2w fr-mb-0" id="modal-rev-source" style="display: none;"></p>
+                            </div>
+                            
+                            <!-- Phase de conception de solutions -->
+                            <h2 class="fr-h4 fr-mt-4w fr-mb-2w">Phase de Résolution Démocratique</h2>
+                            <p class="fr-text--sm">Utilisez cet espace pour formuler des propositions concrètes, juridiques ou budgétaires afin de répondre à cette revendication.</p>
+                            
+                            <div class="fr-input-group fr-mt-2w">
+                                <label class="fr-label" for="solution-texte">Proposition de solution</label>
+                                <textarea class="fr-input" id="solution-texte" name="solution-texte" rows="6" placeholder="Ex: Réallocation du budget de l'éducation via l'amendement n°..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="fr-modal__footer">
+                            <ul class="fr-btns-group fr-btns-group--right fr-btns-group--inline-reverse fr-btns-group--inline-lg fr-btns-group--icon-left">
+                                <li><button class="fr-btn fr-icon-checkbox-circle-line" aria-controls="fr-modal-revendication">Soumettre la solution</button></li>
+                                <li><button class="fr-btn fr-btn--secondary" aria-controls="fr-modal-revendication">Annuler</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <script type="module" src="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.module.min.js"></script>
+    <script type="text/javascript" nomodule src="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.nomodule.min.js"></script>
+    
+    <!-- Bouton caché utilisé par le JS pour ouvrir la modale via l'API DSFR -->
+    <button id="hidden-rev-modal-trigger" aria-controls="fr-modal-revendication" data-fr-opened="false" style="display: none;"></button>
+    
+    <!-- Initialisation de la page -->
+    <script type="module" src="revendications-script.js"></script>
+</body>
+</html>

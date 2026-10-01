@@ -3,11 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Suivi des mouvements étudiants - Tableau de bord</title>
+    <title>Accueil - Cellule de Veille et de Suivi</title>
     
     <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.min.css">
     <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/utility/utility.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <link rel="stylesheet" href="style-dsfr.css">
 </head>
 <body>
@@ -26,29 +25,25 @@
                             <a href="index.html" title="Accueil - Tableau de bord de suivi">
                                 <p class="fr-header__service-title">Cellule de Veille et de Suivi</p>
                             </a>
-                            <p class="fr-header__service-tagline">Rapport de situation des mouvements étudiants</p>
+                            <p class="fr-header__service-tagline">Portail citoyen d'information et de défense légale</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- Bloc Menu de navigation ajouté -->
+        <!-- Menu de navigation Mobile-First -->
         <div class="fr-header__menu fr-modal" id="modal-menu" aria-labelledby="button-menu">
             <div class="fr-container">
                 <button class="fr-btn--close fr-btn" aria-controls="modal-menu">Fermer</button>
                 <div class="fr-header__menu-links"></div>
                 <nav class="fr-nav" id="navigation-principale" role="navigation" aria-label="Menu principal">
                     <ul class="fr-nav__list">
-                        <li class="fr-nav__item">
-                            <a class="fr-nav__link" href="index.html" target="_self" aria-current="page">Cartographie des mobilisations</a>
-                        </li>
-                        <li class="fr-nav__item">
-                            <a class="fr-nav__link" href="justice.html" target="_self">Droits et Justice</a>
-                        </li>
-                        <li class="fr-nav__item">
-                            <a class="fr-nav__link" href="observatoire.html" target="_self">Observatoire Démocratique</a>
-                        </li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-home-4-fill fr-link--icon-left" href="index.html" target="_self" aria-current="page">Accueil</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-map-pin-2-fill fr-link--icon-left" href="map.html" target="_self">Carte</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-draft-fill fr-link--icon-left" href="revendications.html" target="_self">Cahier</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-scales-3-fill fr-link--icon-left" href="justice.html" target="_self">Justice</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-eye-fill fr-link--icon-left" href="observatoire.html" target="_self">Veille</a></li>
                     </ul>
                 </nav>
             </div>
@@ -58,135 +53,108 @@
     <main role="main" id="contenu">
         <div class="fr-container fr-mt-6w fr-mb-6w">
             
-            <div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
-                <div class="fr-col-12">
-                    <h1 class="fr-h1">Point de situation national</h1>
-                    <div class="fr-alert fr-alert--warning fr-mb-4w">
-                        <h3 class="fr-alert__title">Avertissement</h3>
-                        <p>Situation tendue : 119 étudiants blessés, 32 membres de l'Éducation Nationale et 83 membres des FDO. (Données BFM TV)</p>
-                    </div>
+            <!-- Hero Section : Contexte de la mobilisation -->
+            <div class="fr-grid-row fr-grid-row--gutters fr-mb-6w">
+                <div class="fr-col-12 fr-col-md-10">
+                    <h1 class="fr-h1">Mouvement Étudiant & Lycéen <br><span class="fr-text--alt">Automne 2026</span></h1>
+                    <p class="fr-text--lead">
+                        Face à l'engorgement des infrastructures, à la précarité croissante exacerbée par la mise en place du repas à 1€, et à une sélection algorithmique (Parcoursup) excluant plus de 126 000 jeunes, la jeunesse se mobilise.
+                    </p>
+                    <p>
+                        Ce Dôme d'Initiative Citoyenne a pour vocation de documenter factuellement les blocages en cours, de recenser les revendications issues des Assemblées Générales, et de fournir un bouclier juridique face aux interventions musclées des forces de l'ordre (tirs de LBD, absence de RIO, atteintes au droit de manifestation).
+                    </p>
                 </div>
             </div>
 
-            <!-- Bilan chiffré -->
-            <section aria-labelledby="titre-chiffres-cles">
-                <h2 id="titre-chiffres-cles" class="fr-h2">Bilan chiffré provisoire</h2>
-                <div class="fr-grid-row fr-grid-row--gutters fr-mb-6w">
-                    <div class="fr-col-12 fr-col-md-3">
-                        <div class="fr-card fr-card--no-border metric-card fr-background-alt--grey">
-                            <div class="metric-number">356</div>
-                            <div class="metric-label">Établissements concernés</div>
-                        </div>
-                    </div>
-                    <div class="fr-col-12 fr-col-md-3">
-                        <div class="fr-card fr-card--no-border metric-card fr-background-alt--red-marianne">
-                            <div class="metric-number" style="color: #c9191e;">119</div>
-                            <div class="metric-label">Étudiants blessés</div>
-                        </div>
-                    </div>
-                    <div class="fr-col-12 fr-col-md-3">
-                        <div class="fr-card fr-card--no-border metric-card fr-background-alt--orange-terre-battue">
-                            <div class="metric-number" style="color: #e4794a;">32</div>
-                            <div class="metric-label">Éducation Nationale</div>
-                        </div>
-                    </div>
-                    <div class="fr-col-12 fr-col-md-3">
-                        <div class="fr-card fr-card--no-border metric-card fr-background-alt--blue-france">
-                            <div class="metric-number">83</div>
-                            <div class="metric-label">Forces de l'Ordre</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Cartographie -->
-            <section aria-labelledby="titre-cartographie" class="fr-mb-6w">
-                <h2 id="titre-cartographie" class="fr-h2">Cartographie et Lieux</h2>
-                <div id="map" class="fr-mb-4w"></div>
+            <!-- Grille de navigation sous forme de Tuiles (Tiles DSFR) -->
+            <div class="fr-grid-row fr-grid-row--gutters">
                 
-                <div class="fr-table fr-table--bordered" id="table-lieux">
-                    <table>
-                        <caption>Liste des établissements (Cliquez sur la carte pour les détails)</caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">Ville</th>
-                                <th scope="col">Établissement</th>
-                                <th scope="col">Statut</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Rempli par script.js -->
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <!-- Revendications -->
-            <section aria-labelledby="titre-revendications" class="fr-mb-6w">
-                <h2 id="titre-revendications" class="fr-h2">Analyse des Revendications</h2>
-                <div class="fr-grid-row fr-grid-row--gutters">
-                    <div class="fr-col-12 fr-col-md-8" id="revendications-list">
-                        <!-- Rempli par script.js -->
+                <!-- Tuile Cartographie -->
+                <div class="fr-col-12 fr-col-md-6">
+                    <div class="fr-tile fr-enlarge-link fr-tile--horizontal">
+                        <div class="fr-tile__body">
+                            <h2 class="fr-tile__title">
+                                <a class="fr-tile__link" href="map.html">Cartographie des points de blocage</a>
+                            </h2>
+                            <p class="fr-tile__desc">Suivi en temps réel des lycées et universités mobilisés, avec vidéos de terrain et historique des effectifs.</p>
+                        </div>
+                        <div class="fr-tile__header">
+                            <div class="fr-tile__pictogram">
+                                <span class="fr-icon-map-pin-2-fill fr-icon--lg" aria-hidden="true"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
 
+                <!-- Tuile Revendications -->
+                <div class="fr-col-12 fr-col-md-6">
+                    <div class="fr-tile fr-enlarge-link fr-tile--horizontal">
+                        <div class="fr-tile__body">
+                            <h2 class="fr-tile__title">
+                                <a class="fr-tile__link" href="revendications.html">Cahier National des Revendications</a>
+                            </h2>
+                            <p class="fr-tile__desc">Synthèse des doléances (moyens alloués, réformes pédagogiques) et espace de résolution démocratique.</p>
+                        </div>
+                        <div class="fr-tile__header">
+                            <div class="fr-tile__pictogram">
+                                <span class="fr-icon-draft-fill fr-icon--lg" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tuile Droits et Justice -->
+                <div class="fr-col-12 fr-col-md-6">
+                    <div class="fr-tile fr-enlarge-link fr-tile--horizontal">
+                        <div class="fr-tile__body">
+                            <h2 class="fr-tile__title">
+                                <a class="fr-tile__link" href="justice.html">Droits, Justice & Recours légaux</a>
+                            </h2>
+                            <p class="fr-tile__desc">Accompagnement juridique pour les victimes de violences d'État, qualifications pénales et modèles de signalement (Article 40).</p>
+                        </div>
+                        <div class="fr-tile__header">
+                            <div class="fr-tile__pictogram">
+                                <span class="fr-icon-scales-3-fill fr-icon--lg" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tuile Observatoire -->
+                <div class="fr-col-12 fr-col-md-6">
+                    <div class="fr-tile fr-enlarge-link fr-tile--horizontal">
+                        <div class="fr-tile__body">
+                            <h2 class="fr-tile__title">
+                                <a class="fr-tile__link" href="observatoire.html">Observatoire Démocratique</a>
+                            </h2>
+                            <p class="fr-tile__desc">Analyse des biais médiatiques, de l'instrumentalisation des forces de l'ordre et des asymétries institutionnelles.</p>
+                        </div>
+                        <div class="fr-tile__header">
+                            <div class="fr-tile__pictogram">
+                                <span class="fr-icon-eye-fill fr-icon--lg" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </main>
 
-    <!-- Modale DSFR pour le détail d'un lieu -->
-    <dialog aria-labelledby="modal-title" id="fr-modal-lieux" class="fr-modal" role="dialog">
-        <div class="fr-container fr-container--fluid fr-container-md">
-            <div class="fr-grid-row fr-grid-row--center">
-                <div class="fr-col-12 fr-col-md-8 fr-col-lg-6">
-                    <div class="fr-modal__body">
-                        <div class="fr-modal__header">
-                            <button class="fr-btn--close fr-btn" title="Fermer la fenêtre modale" aria-controls="fr-modal-lieux">Fermer</button>
-                        </div>
-                        <div class="fr-modal__content">
-                            <h1 id="modal-title" class="fr-modal__title">Nom du lieu</h1>
-                            <p>
-                                <strong>Type :</strong> <span id="modal-type" class="fr-badge fr-badge--info"></span><br>
-                                <strong>Statut actuel :</strong> <span id="modal-status" class="fr-badge fr-badge--warning"></span>
-                            </p>
-                            
-                            <!-- Nouveau tableau pour l'historique -->
-                            <h3 class="fr-h6 fr-mt-4w">Historique de mobilisation</h3>
-                            <div class="fr-table fr-table--bordered">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Date</th>
-                                            <th scope="col">Effectif estimé</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="modal-historique-body">
-                                        <!-- Rempli par modal.js -->
-                                    </tbody>
-                                </table>
-                            </div>
-                            
-                            <div id="modal-video-container" class="fr-mb-2w"></div>                         
-
-                            <div class="fr-input-group fr-mt-4w">
-                                <label class="fr-label" for="notes-terrain">Notes de suivi (local)</label>
-                                <textarea class="fr-input" id="notes-terrain" name="notes-terrain" rows="4"></textarea>
-                            </div>
-                        </div>
-                        <div class="fr-modal__footer">
-                            <button class="fr-btn" id="btn-save-notes" aria-controls="fr-modal-lieux">Enregistrer et fermer</button>
-                        </div>
-                    </div>
+    <footer role="contentinfo" class="fr-footer" id="footer">
+        <div class="fr-container">
+            <div class="fr-footer__body">
+                <div class="fr-footer__brand fr-enlarge-link">
+                    <p class="fr-logo">République<br>Française</p>
+                </div>
+                <div class="fr-footer__content">
+                    <p class="fr-footer__content-desc">Dôme d'Initiative Citoyenne (RIC_ENGINE) - Déployé dans une architecture garantissant la transparence de l'information publique.</p>
                 </div>
             </div>
         </div>
-    </dialog>
+    </footer>
 
     <script type="module" src="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.module.min.js"></script>
     <script type="text/javascript" nomodule src="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.nomodule.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    
-    <button id="hidden-modal-trigger" aria-controls="fr-modal-lieux" data-fr-opened="false" style="display: none;"></button>
-    <script type="module" src="script.js"></script>
 </body>
 </html>
