@@ -110,6 +110,23 @@
         }
     },
     {
+        "id": "cae-01",
+        "ville": "Caen",
+        "etablissement": "Université de Caen Normandie (Campus 1)",
+        "type": "Université",
+        "statut": "Engorgement des infrastructures",
+        "lat": 49.1931,
+        "lng": -0.3639,
+        "historique_mobilisation": {
+            "2026-09-11": null,
+            "2026-09-29": null,
+            "2026-10-01": null,
+            "2026-10-06": null
+        },
+        "source": "France 3 Normandie (Vidéo)",
+        "video_url": "https://www.youtube.com/embed/e5bVBkJc0Nc"
+    },
+    {
         "id": "ssd-01",
         "ville": "Saint-Denis",
         "etablissement": "Université Paris 8 Vincennes - Saint-Denis",
@@ -193,6 +210,7 @@
             "2026-10-01": null,
             "2026-10-06": null
         },
+        "video_url": "https://youtube.com/embed/J6txiHbFyfM?si=gfAm61vUeyLQoUgl",
         "source": "TV5Monde (Vidéo)"
     },
     {
@@ -281,7 +299,8 @@
             "2026-10-01": null,
             "2026-10-06": null
         },
-        "source": "Rennes Infos Autrement"
+        "source": "Rennes Infos Autrement",
+        "video_url": "https://youtube.com/embed/AwFL1f07H-g?si=eoIZwgyuWuVKBSaa"
     },
     {
         "id": "tou-01",
@@ -345,7 +364,8 @@
             "2026-10-01": null,
             "2026-10-06": null
         },
-        "source": "France 24"
+        "source": "France 24",
+        "video_url": "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1098813642734903&show_text=false"
     },
     {
         "id": "nan-01",
@@ -363,7 +383,7 @@
         },
         "source": "Ouest-France / Syndicat Étudiant"
     },
-    {
+{
         "id": "nan-02",
         "ville": "Nantes",
         "etablissement": "Lycée Nelson Mandela",
@@ -377,7 +397,8 @@
             "2026-10-01": null,
             "2026-10-06": null
         },
-        "source": "Télénantes / TF1 Info"
+        "source": "Télénantes / TF1 Info",
+        "video_url": "https://youtube.com/embed/nJfB_oi98q0?si=ktmpYeNRmCeD2OPx"
     },
     {
         "id": "mar-01",
