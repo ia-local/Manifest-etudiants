@@ -364,6 +364,22 @@
         "source": "Ouest-France / Syndicat Étudiant"
     },
     {
+        "id": "nan-02",
+        "ville": "Nantes",
+        "etablissement": "Lycée Nelson Mandela",
+        "type": "Lycée",
+        "statut": "Bloqué - Incendie et évacuation totale",
+        "lat": 47.2085,
+        "lng": -1.5327,
+        "historique_mobilisation": {
+            "2026-09-29": null,
+            "2026-09-30": null,
+            "2026-10-01": null,
+            "2026-10-06": null
+        },
+        "source": "Télénantes / TF1 Info"
+    },
+    {
         "id": "mar-01",
         "ville": "Marseille",
         "etablissement": "Lycée Thiers",
