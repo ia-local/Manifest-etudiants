@@ -1,4 +1,100 @@
-[
+[{
+        "id": "esp-mad-01",
+        "ville": "Madrid (Espagne)",
+        "etablissement": "Atocha / Puerta del Sol (Coordination Étudiante & Enseignante)",
+        "type": "Collectif étudiant",
+        "statut": "Marche unitaire - Défense de l'éducation publique",
+        "lat": 40.4168,
+        "lng": -3.7038,
+        "historique_mobilisation": {
+            "2026-09-27": 12000,
+            "2026-09-29": null,
+            "2026-10-01": null,
+            "2026-10-06": null
+        },
+        "source": "Sindicato de Estudiantes / Presse nationale"
+    },
+    {
+        "id": "esp-val-01",
+        "ville": "Valladolid (Espagne)",
+        "etablissement": "Universidad de Valladolid",
+        "type": "Université",
+        "statut": "Grève étudiante - Préparation grève illimitée",
+        "lat": 41.6523,
+        "lng": -4.7245,
+        "historique_mobilisation": {
+            "2026-09-28": 1800,
+            "2026-09-29": null,
+            "2026-10-01": null,
+            "2026-10-06": null
+        },
+        "source": "Consejería de Educación / Médias locaux"
+    },
+    {
+        "id": "ita-rom-01",
+        "ville": "Rome (Italie)",
+        "etablissement": "Sapienza Università di Roma",
+        "type": "Université",
+        "statut": "Grève générale - Blocage des départements",
+        "lat": 41.9038,
+        "lng": 12.5144,
+        "historique_mobilisation": {
+            "2026-09-25": 4500,
+            "2026-09-26": 3200,
+            "2026-09-29": null,
+            "2026-10-01": null,
+            "2026-10-06": null
+        },
+        "source": "Intersyndicale Éducation & Recherche"
+    },
+    {
+        "id": "bel-bru-01",
+        "ville": "Bruxelles (Belgique)",
+        "etablissement": "Rond-point Schuman / Campus Solbosch (ULB)",
+        "type": "Collectif étudiant",
+        "statut": "Manifestation européenne en front commun",
+        "lat": 50.8427,
+        "lng": 4.3826,
+        "historique_mobilisation": {
+            "2026-09-24": 3000,
+            "2026-09-29": null,
+            "2026-10-01": null,
+            "2026-10-06": null
+        },
+        "source": "Coordination Jeunesse Front Commun"
+    },
+    {
+        "id": "bel-lie-01",
+        "ville": "Liège (Belgique)",
+        "etablissement": "Université de Liège (Place du 20-Août)",
+        "type": "Université",
+        "statut": "Journée de grève et rassemblement",
+        "lat": 50.6412,
+        "lng": 5.5753,
+        "historique_mobilisation": {
+            "2026-09-10": 15000,
+            "2026-09-29": null,
+            "2026-10-01": null,
+            "2026-10-06": null
+        },
+        "source": "Presse belge / Syndicats de l'enseignement"
+    },
+    {
+        "id": "all-kas-01",
+        "ville": "Kassel (Allemagne)",
+        "etablissement": "Universität Kassel",
+        "type": "Université",
+        "statut": "Rassemblement contre l'austérité et la recherche militaire",
+        "lat": 51.3235,
+        "lng": 9.5085,
+        "historique_mobilisation": {
+            "2026-09-25": 1100,
+            "2026-09-29": null,
+            "2026-10-01": null,
+            "2026-10-06": null
+        },
+        "source": "AStA Universität Kassel"
+    },
     {
         "id": "par-01",
         "ville": "Paris",
