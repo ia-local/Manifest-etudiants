@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr" data-fr-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Procès-Verbal & Cadre de Procédure Pénale - Pontoise</title>
+    
+    <!-- CSS Système de Design de l'État (DSFR) -->
+    <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/utility/utility.min.css">
+    <link rel="stylesheet" href="style-dsfr.css">
+    
+    <style>
+        @media print {
+            header, footer, nav, .no-print {
+                display: none !important;
+            }
+            body {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+            .fr-container {
+                max-width: 100% !important;
+                width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .fr-badge {
+                border: 1px solid #000;
+                color: #000 !important;
+                background: none !important;
+            }
+            .fr-callout, .fr-card {
+                border: 1px solid #ccc !important;
+                background: #fdfdfd !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête officiel DSFR -->
+    <header role="banner" class="fr-header no-print">
+        <div class="fr-header__body">
+            <div class="fr-container">
+                <div class="fr-header__body-row">
+                    <div class="fr-header__brand fr-enlarge-link">
+                        <div class="fr-header__brand-top">
+                            <div class="fr-header__logo">
+                                <p class="fr-logo">République<br>Française</p>
+                            </div>
+                        </div>
+                        <div class="fr-header__service">
+                            <a href="index.html" title="Accueil - Portail Citoyen">
+                                <p class="fr-header__service-title">Cellule de Veille et de Suivi</p>
+                            </a>
+                            <p class="fr-header__service-tagline">Acte de procédure, qualifications pénales et cadre d'enquête (Val-d'Oise)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Menu de navigation Mobile-First -->
+        <div class="fr-header__menu fr-modal" id="modal-menu" aria-labelledby="button-menu">
+            <div class="fr-container">
+                <button class="fr-btn--close fr-btn" aria-controls="modal-menu">Fermer</button>
+                <div class="fr-header__menu-links"></div>
+                <nav class="fr-nav" id="navigation-principale" role="navigation" aria-label="Menu principal">
+                    <ul class="fr-nav__list">
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-home-4-fill fr-link--icon-left" href="index.html" target="_self">Accueil</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-map-pin-2-fill fr-link--icon-left" href="map.html" target="_self">Carte Nat.</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-map-pin-user-fill fr-link--icon-left" href="cartographie.html" target="_self">Enquête 95</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-draft-fill fr-link--icon-left" href="revendications.html" target="_self">Cahier</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-scales-3-fill fr-link--icon-left" href="justice.html" target="_self" aria-current="page">Justice / PV</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main role="main" id="contenu">
+        <div class="fr-container fr-mt-6w fr-mb-6w">
+            
+            <!-- Bouton d'exportation PDF / Impression -->
+            <div class="no-print fr-mb-4w" style="display: flex; justify-content: flex-end;">
+                <button class="fr-btn fr-icon-printer-line fr-btn--icon-left" onclick="window.print()">
+                    Exporter / Enregistrer en PDF
+                </button>
+            </div>
+
+            <!-- En-tête de la page -->
+            <div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
+                <div class="fr-col-12">
+                    <div class="fr-badge fr-badge--success fr-mb-2w">Signalement Enregistré - Bureau d'Ordre Général (Pontoise)</div>
+                    <h1 class="fr-h1">Procès-Verbal de Signalement & Mémoire en Défense</h1>
+                    <p class="fr-text--lead">Cadre juridique de saisine du Tribunal Judiciaire de Pontoise — Affaire Eden M. (14 ans) c/ Forces de l'Ordre (28 septembre 2026).</p>
+                    
+                    <div class="fr-alert fr-alert--info fr-mb-4w">
+                        <h3 class="fr-alert__title">Certificat de Saisine et Transmission</h3>
+                        <p>Le signalement a été officiellement reçu et enregistré par le <strong>Bureau d'Ordre Général du Tribunal Judiciaire de Pontoise</strong> (3 rue Victor Hugo, 95300 Pontoise). Une copie officielle de cet acte est transmise ce jour à la victime, à sa famille et au conseil en charge de la défense.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 1 : Fondements Légaux et Articles du CPP -->
+            <section class="fr-mb-6w" aria-labelledby="section-fondements">
+                <h2 id="section-fondements" class="fr-h2">1. Fondements Procéduraux (Code de Procédure Pénale)</h2>
+                
+                <div class="fr-accordions-group">
+                    <section class="fr-accordion">
+                        <h3 class="fr-accordion__title">
+                            <button class="fr-accordion__btn" aria-expanded="false" aria-controls="acc-cpp-1">Articles 40 & 41 du CPP : Saisine du Parquet et direction d'enquête</button>
+                        </h3>
+                        <div class="fr-collapse" id="acc-cpp-1">
+                            <p><strong>Article 40 :</strong> « Toute autorité constituée, tout officier public ou fonctionnaire qui, dans l'exercice de ses fonctions, acquiert la connaissance d'un crime ou d'un délit est tenu d'en donner avis sans délai au procureur de la République... »<br>
+                            <strong>Article 41 :</strong> Le procureur de la République dirige l'enquête, ordonne toutes les investigations nécessaires à la manifestation de la vérité et veille à la conservation des preuves.</p>
+                        </div>
+                    </section>
+
+                    <section class="fr-accordion">
+                        <h3 class="fr-accordion__title">
+                            <button class="fr-accordion__btn" aria-expanded="false" aria-controls="acc-cpp-2">Article 53 du CPP : Constatation des infractions et identification des auteurs</button>
+                        </h3>
+                        <div class="fr-collapse" id="acc-cpp-2">
+                            <p><strong>Article 53 :</strong> Constitue un crime ou un délit flagrant le crime ou le délit qui se commet actuellement, ou qui vient de se commettre. L'enquête de flagrance implique des actes d'investigation urgents (saisies d'armes, réquisitions de vidéosurveillance, auditions immédiates) impératifs pour identifier sans délai les fonctionnaires de police mis en cause (identification par numéros RIO et registres d'armement de la DIPN 95).</p>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <!-- Section 2 : Le Rappel des Faits -->
+            <section class="fr-mb-6w" aria-labelledby="section-faits">
+                <h2 id="section-faits" class="fr-h2">2. Matérialité des Faits (28 septembre 2026 - Saint-Ouen-l'Aumône)</h2>
+                <div class="fr-callout fr-icon-information-line">
+                    <h3 class="fr-callout__title">Chronologie aux abords du Lycée Château d'Épluches</h3>
+                    <p class="fr-callout__text">
+                        1. Un adolescent de 14 ans isolé face à quatre fonctionnaires lourdement équipés.<br>
+                        2. Coups portés au visage et à la matraque par les agents.<br>
+                        3. Riposte défensive de l'adolescent.<br>
+                        4. <strong>Tir tendu direct à moins de 5 mètres d'une grenade lacrymogène de type « Cougar »</strong> (56 mm) visant la mâchoire, entraînant la fracture des dents, une hémorragie et un transport d'urgence au CH de Pontoise après un transit contesté au commissariat local.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 3 : Qualifications Pénales -->
+            <section class="fr-mb-6w" aria-labelledby="section-qualifications">
+                <h2 id="section-qualifications" class="fr-h2">3. Qualifications Pénales Retenues</h2>
+                <div class="fr-table fr-table--bordered">
+                    <table>
+                        <caption>Application des articles du Code Pénal</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Infraction invoquée</th>
+                                <th scope="col">Base légale (Code Pénal)</th>
+                                <th scope="col">Caractérisation factuelle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Violences volontaires aggravées</th>
+                                <td>Articles 222-9, 222-11 à 222-13</td>
+                                <td>Usage d'une arme par destination/nature hors doctrine d'emploi sur un mineur de 14 ans (traumatismes faciaux).</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mise en danger de la vie d'autrui</th>
+                                <td>Article 223-1</td>
+                                <td>Détournement d'une arme de dispersion (Cougar) en arme de tir tendu létal à courte portée.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Entrave à l'action de la justice</th>
+                                <td>Article 434-4</td>
+                                <td>Risque de dissimulation ou retard dans la transmission des registres d'armement et des RIO.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section 4 : Irrégularités et Exigences au Commissariat -->
+            <section class="fr-mb-6w" aria-labelledby="section-commissariat">
+                <h2 id="section-commissariat" class="fr-h2">4. Contrôle des Actes et Nullités (Passage au Commissariat)</h2>
+                <div class="fr-alert fr-alert--warning">
+                    <h3 class="fr-alert__title">Exigences procédurales renforcées (Mineur blessé)</h3>
+                    <p>
+                        Le passage de la victime mineure (14 ans) dans les locaux du commissariat de Saint-Ouen-l'Aumône en état de détresse physique avérée (traumatismes faciaux, hémorragies massives) pose la question de la validité des actes dressés sur place :
+                    </p>
+                    <ul>
+                        <li><strong>Défaut de prise en charge médicale immédiate (Art. 63-3 CPP) :</strong> Obligation absolue d'un examen par un médecin requis avant tout interrogatoire ou mesure de contrainte.</li>
+                        <li><strong>Information des représentants légaux (Art. 706-52 CPP) :</strong> Retard ou omission potentielle dans l'avertissement de la famille.</li>
+                        <li><strong>Réquisitions ciblées :</strong> Demande de saisie des mains courantes informatisées (LSI), horodatage des appels au SAMU et fiches de liaison médicale de l'Hôtel de police.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 5 : Réquisitions Formelles au Parquet -->
+            <section class="fr-mb-6w" aria-labelledby="section-demandes">
+                <h2 id="section-demandes" class="fr-h2">5. Réquisitions et Demandes adressées au Procureur</h2>
+                <ul>
+                    <li><strong>Jonction et Extension :</strong> Joindre le signalement au dossier d'information ouvert près le Tribunal Judiciaire de Pontoise et étendre l'enquête aux chefs de violences aggravées par personne dépositaire de l'autorité publique (PDAP).</li>
+                    <li><strong>Mise sous séquestre :</strong> Sauvegarde intégrale des vidéos (caméras piétons, vidéosurveillance urbaine, images contributives).</li>
+                    <li><strong>Identification et Audition :</strong> Placement en garde à vue ou audition libre des quatre agents de l'unité spécialisée pour identifier formellement l'auteur du tir de Cougar et des coups initiaux.</li>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Pied de page DSFR -->
+    <footer role="contentinfo" class="fr-footer no-print" id="footer">
+        <div class="fr-container">
+            <div class="fr-footer__body">
+                <div class="fr-footer__brand fr-enlarge-link">
+                    <p class="fr-logo">République<br>Française</p>
+                </div>
+                <div class="fr-footer__content">
+                    <p class="fr-footer__content-desc">Dôme d'Initiative Citoyenne (RIC_ENGINE) — Registre des actes de procédure et mémoires en défense.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts DSFR -->
+    <script type="module" src="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.module.min.js"></script>
+    <script type="text/javascript" nomodule src="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>

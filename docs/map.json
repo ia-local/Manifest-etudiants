@@ -481,5 +481,21 @@
     },
     "source": "Vidéos réseaux sociaux / 20 Minutes France",
     "video_url": "https://www.youtube.com/embed/e5bVBkJc0Nc"
-}
+},
+{
+        "id": "met-01",
+        "ville": "Metz",
+        "etablissement": "Collège François-Rabelais",
+        "type": "Collège",
+        "statut": "Incendie majeur (sanitaires, préau) - Enquête en cours",
+        "lat": 49.0960,
+        "lng": 6.1780,
+        "historique_mobilisation": {
+            "2026-10-02": null,
+            "2026-10-03": 0,
+            "2026-10-06": null
+        },
+        "source": "Le Républicain Lorrain / Moselle TV",
+        "video_url": "https://youtube.com/embed/AVWIL7Uw5us?si=bIKBZHKcX4lprxA6"
+    }
 ]

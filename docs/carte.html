@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr" data-fr-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cartographie Judiciaire & Pièces à conviction - Pontoise / Saint-Ouen</title>
+    
+    <!-- CSS Système de Design de l'État (DSFR) -->
+    <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/utility/utility.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="style-dsfr.css">
+    
+    <style>
+        #map-pontoise {
+            height: 500px;
+            width: 100%;
+            border-radius: 0.5rem;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête officiel DSFR -->
+    <header role="banner" class="fr-header">
+        <div class="fr-header__body">
+            <div class="fr-container">
+                <div class="fr-header__body-row">
+                    <div class="fr-header__brand fr-enlarge-link">
+                        <div class="fr-header__brand-top">
+                            <div class="fr-header__logo">
+                                <p class="fr-logo">République<br>Française</p>
+                            </div>
+                        </div>
+                        <div class="fr-header__service">
+                            <a href="index.html" title="Accueil - Portail Citoyen">
+                                <p class="fr-header__service-title">Cellule de Veille et de Suivi</p>
+                            </a>
+                            <p class="fr-header__service-tagline">Cartographie opérationnelle, maillage institutionnel et pièces à conviction (Val-d'Oise)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Menu de navigation Mobile-First -->
+        <div class="fr-header__menu fr-modal" id="modal-menu" aria-labelledby="button-menu">
+            <div class="fr-container">
+                <button class="fr-btn--close fr-btn" aria-controls="modal-menu">Fermer</button>
+                <div class="fr-header__menu-links"></div>
+                <nav class="fr-nav" id="navigation-principale" role="navigation" aria-label="Menu principal">
+                    <ul class="fr-nav__list">
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-home-4-fill fr-link--icon-left" href="index.html" target="_self">Accueil</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-map-pin-2-fill fr-link--icon-left" href="map.html" target="_self">Carte Nat.</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-map-pin-user-fill fr-link--icon-left" href="cartographie.html" target="_self" aria-current="page">Enquête 95</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-draft-fill fr-link--icon-left" href="revendications.html" target="_self">Cahier</a></li>
+                        <li class="fr-nav__item"><a class="fr-nav__link fr-icon-scales-3-fill fr-link--icon-left" href="justice.html" target="_self">Justice</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main role="main" id="contenu">
+        <div class="fr-container fr-mt-6w fr-mb-6w">
+            
+            <div class="fr-grid-row fr-grid-row--gutters fr-mb-4w">
+                <div class="fr-col-12">
+                    <div class="fr-badge fr-badge--error fr-mb-2w">Zone d'Enquête Judiciaire - Val-d'Oise</div>
+                    <h1 class="fr-h1">Cartographie Tactique & Pièces à Conviction (Pontoise / Saint-Ouen)</h1>
+                    <p class="fr-text--lead">Visualisation géographique des points névralgiques de l'affaire Eden M. (14 ans) et accès direct aux éléments visuels de preuve (Arme Cougar).</p>
+                    
+                    <div class="fr-alert fr-alert--info fr-mb-4w">
+                        <h3 class="fr-alert__title">Instruction en cours</h3>
+                        <p>Le signalement est enregistré au <strong>Bureau d'Ordre Général du Tribunal Judiciaire de Pontoise</strong>. Cliquez sur le marqueur du lycée pour visionner l'élément de preuve vidéo local.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Cartographie Leaflet -->
+            <section class="fr-mb-6w" aria-labelledby="section-carte-locale">
+                <h2 id="section-carte-locale" class="fr-h2">Carte interactive et accès aux preuves</h2>
+                <div id="map-pontoise" class="fr-mb-4w"></div>
+            </section>
+
+            <!-- Nouvelle Section : Analyse des Unités et du Parcours du Mineur -->
+            <section class="fr-mb-6w" aria-labelledby="section-analyse-unites">
+                <h2 id="section-analyse-unites" class="fr-h2">Analyse opérationnelle : Unités en cause et prise en charge</h2>
+                <div class="fr-grid-row fr-grid-row--gutters">
+                    <div class="fr-col-12 fr-col-md-6">
+                        <div class="fr-card fr-card--no-border fr-background-alt--grey fr-p-4w">
+                            <h3 class="fr-h4">1. Imputation de l'armement lourd (Lance-grenades Cougar)</h3>
+                            <p class="fr-text--sm">
+                                Les patrouilles de base du commissariat de Saint-Ouen-l'Aumône ne sont pas dotées de lance-grenades de 56 mm. L'usage de cette arme de force intermédiaire implique la présence indispensable d'unités spécialisées de renfort (type <strong>CSI 95</strong> ou <strong>CDI</strong> rattachées à la DIPN 95), ou d'unités de force mobile. Les réquisitions doivent cibler en priorité les registres d'armement de l'armurerie centrale départementale.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fr-col-12 fr-col-md-6">
+                        <div class="fr-card fr-card--no-border fr-background-alt--grey fr-p-4w">
+                            <h3 class="fr-h4">2. Transit au Commissariat et rupture des soins</h3>
+                            <p class="fr-text--sm">
+                                Avant d'être acheminé d'urgence vers le centre hospitalier de Pontoise face à la gravité des traumatismes faciaux (dents fracturées, hémorragies), le mineur a subi un passage contesté et extrêmement violent dans les locaux du commissariat local. Cette étape procédurale fait l'objet d'une exigence de production intégrale des mains courantes et des registres de retenue pour documenter les conditions de prise en charge.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Table récapitulative -->
+            <section class="fr-mb-6w" aria-labelledby="section-points-cles">
+                <h2 id="section-points-cles" class="fr-h2">Index des points d'intérêt judiciaire</h2>
+                <div class="fr-table fr-table--bordered">
+                    <table>
+                        <caption>Établissements et institutions référencés dans l'enquête</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Institution / Site</th>
+                                <th scope="col">Adresse</th>
+                                <th scope="col">Rôle et Pièces associées</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Lycée Professionnel Château d'Épluches</th>
+                                <td>45 avenue du Château, 95310 Saint-Ouen-l'Aumône</td>
+                                <td>Lieu des faits : usage illégitime d'une arme de type Cougar. <strong>Vidéo probante disponible via le marqueur de la carte.</strong></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Commissariat de Saint-Ouen-l'Aumône</th>
+                                <td>26 rue du Général-Leclerc, 95310 Saint-Ouen-l'Aumône</td>
+                                <td>Centre de transit / audition initiale de la victime mineure avant transfert hospitalier.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tribunal Judiciaire de Pontoise</th>
+                                <td>3 rue Victor Hugo, 95300 Pontoise</td>
+                                <td>Bureau d'Ordre Général — Suivi de l'instruction pénale.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Modale DSFR pour la lecture de la preuve vidéo -->
+    <dialog aria-labelledby="modal-preuve-title" id="fr-modal-preuve" class="fr-modal" role="dialog">
+        <div class="fr-container fr-container--fluid fr-container-md">
+            <div class="fr-grid-row fr-grid-row--center">
+                <div class="fr-col-12 fr-col-md-10 fr-col-lg-8">
+                    <div class="fr-modal__body">
+                        <div class="fr-modal__header">
+                            <button class="fr-btn--close fr-btn" title="Fermer la fenêtre modale" aria-controls="fr-modal-preuve">Fermer</button>
+                        </div>
+                        <div class="fr-modal__content">
+                            <h1 id="modal-preuve-title" class="fr-modal__title">Titre de la pièce</h1>
+                            <p class="fr-text--sm" id="modal-preuve-desc">Description de la preuve matérielle enregistrée.</p>
+                            
+                            <!-- Conteneur dynamique de la vidéo locale -->
+                            <div id="modal-preuve-video-container" class="fr-mt-4w fr-mb-4w" style="text-align: center;"></div>
+                        </div>
+                        <div class="fr-modal__footer">
+                            <button class="fr-btn" aria-controls="fr-modal-preuve">Fermer le lecteur</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Bouton déclencheur masqué requis par le DSFR pour l'ouverture programmatique de la modale -->
+    <button id="hidden-preuve-modal-trigger" aria-controls="fr-modal-preuve" data-fr-opened="false" style="display: none;"></button>
+
+    <!-- Pied de page DSFR -->
+    <footer role="contentinfo" class="fr-footer" id="footer">
+        <div class="fr-container">
+            <div class="fr-footer__body">
+                <div class="fr-footer__brand fr-enlarge-link">
+                    <p class="fr-logo">République<br>Française</p>
+                </div>
+                <div class="fr-footer__content">
+                    <p class="fr-footer__content-desc">Dôme d'Initiative Citoyenne (RIC_ENGINE) — Cartographie des enquêtes judiciaires et administratives.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts DSFR & Leaflet -->
+    <script type="module" src="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.module.min.js"></script>
+    <script type="text/javascript" nomodule src="https://unpkg.com/@gouvfr/dsfr@1.11.2/dist/dsfr/dsfr.nomodule.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Script principal et liaison avec le module modal -->
+    <script type="module">
+        import { openPreuveModal } from './modal-preuve.js';
+
+        // Écouteur global sécurisé évitant les erreurs de syntaxe
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('.js-open-preuve');
+            if (btn) {
+                const src = btn.dataset.src;
+                const title = btn.dataset.title;
+                const desc = btn.dataset.desc;
+                openPreuveModal(src, title, desc);
+            }
+        });
+
+        // Initialisation de la carte Leaflet
+        const mapPontoise = L.map('map-pontoise').setView([49.048, 2.105], 14);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(mapPontoise);
+
+        const pointsEnquete = [
+            {
+                nom: "Lycée Pro. Château d'Épluches",
+                coords: [49.0494, 2.1095],
+                type: "Lieu des faits (Tir Cougar)",
+                desc: "Abords du lycée : rassemblement, violences et tir de grenade lacrymogène Cougar en tir tendu à moins de 5m.",
+                hasVideo: true,
+                videoSrc: "./videos/Arme-cougare.mp4",
+                videoTitle: "Pièce à conviction #1 - Utilisation de l'arme Cougar",
+                videoDesc: "Séquence vidéo documentant l'intervention aux abords du lycée Château d'Épluches le 28 septembre 2026."
+            },
+            {
+                nom: "Commissariat de Saint-Ouen-l'Aumône",
+                coords: [49.0435, 2.1070],
+                type: "Centre de transit / Audition",
+                desc: "26 rue du Général-Leclerc : passage de la victime avant son hospitalisation d'urgence.",
+                hasVideo: false
+            },
+            {
+                nom: "Tribunal Judiciaire de Pontoise",
+                coords: [49.0520, 2.0950],
+                type: "Juridiction Saisie",
+                desc: "3 rue Victor Hugo : Bureau d'Ordre Général, enregistrement du signalement et suivi de l'instruction.",
+                hasVideo: false
+            }
+        ];
+
+        pointsEnquete.forEach(point => {
+            const marker = L.marker(point.coords).addTo(mapPontoise);
+            
+            let htmlContent = `
+                <div style="font-family: Marianne, sans-serif;">
+                    <strong style="font-size: 1.1em; color: #161616;">${point.nom}</strong><br>
+                    <span style="display: inline-block; background-color: #f5f5fe; color: #000091; padding: 2px 6px; font-size: 0.85em; margin: 4px 0; border-radius: 4px;">${point.type}</span><br>
+                    <p style="margin: 4px 0 8px 0; font-size: 0.9em; color: #3a3a3a;">${point.desc}</p>
+            `;
+
+            if (point.hasVideo) {
+                htmlContent += `
+                    <button class="fr-btn fr-btn--sm fr-icon-play-circle-line fr-btn--icon-left js-open-preuve" 
+                        data-src="${point.videoSrc}" 
+                        data-title="${point.videoTitle}" 
+                        data-desc="${point.videoDesc}">
+                        Visionner la preuve vidéo
+                    </button>
+                `;
+            }
+
+            htmlContent += `</div>`;
+            marker.bindPopup(htmlContent);
+        });
+    </script>
+</body>
+</html>
