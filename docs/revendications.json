@@ -44,5 +44,17 @@
         "id": "rev-09",
         "categorie": "Entrepreneuriat et Petite Enfance",
         "description": "Baisse des taxes pour les jeunes créateurs d'entreprise et réorientation du budget vers la petite enfance (en s'appuyant sur les travaux économiques de James Heckman)."
+    },
+    {
+        "id": "rev-10",
+        "categorie": "Justice contre la répression financière et policière",
+        "description": "Exigence d'une réforme profonde de la chaîne répressive, de l'interdiction stricte de l'usage disproportionné des armes de force intermédiaire (lance-grenades Cougar) contre la jeunesse, de la transparence absolue des registres d'armement et des RIO, ainsi que de la responsabilité pénale et financière effective face aux manquements de l'exécutif.",
+        "source": "Signalement et saisine du Tribunal Judiciaire de Pontoise - Oct. 2026"
+    },
+{
+        "id": "rev-11",
+        "categorie": "Souveraineté Économique et Revenu Universel (RUP)",
+        "description": "Institutionnalisation d'un Revenu Universel Progressif (RUP) de 700€ à 7 500€ garanti et d'un droit au travail à vie pour tout citoyen détenteur du Curriculum Vitae Numérique (CVNU) ou document officiel, adossé à un modèle d'économie circulaire 100 % financier fondé sur la juste répartition de la valeur ajoutée et de la TVA.",
+        "source": "Architecture RIC_ENGINE / CVNU"
     }
 ]
