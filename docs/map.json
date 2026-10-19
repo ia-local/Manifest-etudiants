@@ -497,5 +497,76 @@
         },
         "source": "Le Républicain Lorrain / Moselle TV",
         "video_url": "https://youtube.com/embed/AVWIL7Uw5us?si=bIKBZHKcX4lprxA6"
+    },
+    {
+        "id": "metz-02",
+        "ville": "Metz",
+        "etablissement": "Centre-ville / Abords des lycées (Metz)",
+        "type": "Bavure / Interpellation violente",
+        "statut": "Enquête IGPN ouverte (Saisine du Parquet - 6 oct. 2026)",
+        "lat": 49.1193,
+        "lng": 6.1757,
+        "historique_mobilisation": {
+            "2026-10-05": "Interpellation conflictuelle d'une mineure de 14 ans et diffusion de la séquence vidéo."
+        },
+        "source": "Le Républicain Lorrain / Parquet de Metz / IGPN",
+        "video_url": "https://www.youtube.com/embed/lXa0Ra0pulc"
+    },
+    {
+        "id": "elysee-01",
+        "ville": "Paris (8e arrondissement)",
+        "etablissement": "Palais de l'Élysée",
+        "type": "Cible Institutionnelle - Manifestation Nationale",
+        "statut": "Rassemblement prévu le 17 octobre 2026 — Exécution des revendications (RUP, CVNU, Pouvoir d'achat, Rénovation des campus)",
+        "lat": 48.8706,
+        "lng": 2.3171,
+        "adresse": "55 rue du Faubourg Saint-Honoré, 75008 Paris",
+        "historique_mobilisation": {
+            "2026-10-17": "Convergence nationale pour le Revenu Universel Progressif (RUP) et la fin de la répression financière et policière."
+        },
+        "video_url": "https://www.youtube.com/embed/lXa0Ra0pulc",
+        "source": "https://youtu.be/pJFMPFZHnx8?si=PFNSzveW3FEYP_RQ"
+    },
+    {
+        "id": "lim-mairie-01",
+        "ville": "Limoges",
+        "etablissement": "Hôtel de Ville de Limoges",
+        "type": "Mairie",
+        "statut": "Point de convergence institutionnel - Revendications budgétaires locales",
+        "lat": 45.8321,
+        "lng": 1.2598,
+        "adresse": "1 square Jacques-Chirac, 87000 Limoges",
+        "historique_mobilisation": {
+            "2026-10-02": "Rassemblement citoyen contre la vie chère et les restrictions budgétaires."
+        },
+        "source": "Annuaire de l'administration / Suivi terrain"
+    },
+    {
+        "id": "lim-pref-01",
+        "ville": "Limoges",
+        "etablissement": "Préfecture de la Haute-Vienne",
+        "type": "Préfecture",
+        "statut": "Sous haute surveillance - Centralisation des signalements préfectoraux",
+        "lat": 45.8310,
+        "lng": 1.2605,
+        "adresse": "6 rue Daniel Lamazière, 87000 Limoges",
+        "historique_mobilisation": {
+            "2026-10-03": "Dépôt de mémorandums sur la précarité et la répression financière."
+        },
+        "source": "Service-Public.fr / Préfecture 87"
+    },
+    {
+        "id": "par-fin-01",
+        "ville": "Paris",
+        "etablissement": "Pôle Financier / Quartier Opérations Bancaires",
+        "type": "Cible financière / Commerce",
+        "statut": "Ciblage symbolique - Dénonciation des infractions financières (Art. 313 CP)",
+        "lat": 48.8715,
+        "lng": 2.3385,
+        "adresse": "Boulevard Haussmann / Secteur Bancaire, Paris",
+        "historique_mobilisation": {
+            "2026-10-04": "Dénonciation de l'escroquerie systémique et de l'accaparement des richesses."
+        },
+        "source": "Dôme d'Initiative Citoyenne (RIC_ENGINE)"
     }
 ]

@@ -1,22 +1,31 @@
-// script.js
+// script.js (Extrait mis à jour)
 
 import { openLieuModal } from './modal.js';
-import { initMap } from './map.js';
+import { initMap, renderMarkers } from './map.js';
+import { initFilters } from './filtre.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const [mapRes, revRes] = await Promise.all([
+        const [mapRes, revRes, comRes, repRes] = await Promise.all([
             fetch('./map.json'),
-            fetch('./revendications.json')
+            fetch('./revendications.json'),
+            fetch('./commerces.json'),
+            fetch('./etablissements-republique.json')
         ]);
         
-        if (!mapRes.ok || !revRes.ok) {
-            throw new Error("Erreur réseau (HTTP status non OK)");
+        if (!mapRes.ok || !revRes.ok || !comRes.ok || !repRes.ok) {
+            throw new Error("Erreur réseau lors du chargement des sources de données.");
         }
 
         const lieuxData = await mapRes.json();
         const revData = await revRes.json();
+        const commercesData = await comRes.json();
+        const republiqueData = await repRes.json();
 
+        // Fusion de toutes les bases de données cartographiques
+        const globalData = [...lieuxData, ...commercesData, ...republiqueData];
+
+        // Affichage des revendications
         const revContainer = document.getElementById('revendications-list');
         if (revContainer) {
             revContainer.innerHTML = revData.map(rev => `
@@ -29,30 +38,26 @@ document.addEventListener('DOMContentLoaded', async () => {
             `).join('');
         }
 
-        // Tableau enrichi avec le tag du type d'établissement
-        const tableBody = document.querySelector('#table-lieux tbody');
-        if (tableBody) {
-            tableBody.innerHTML = lieuxData.map(lieu => `
-                <tr>
-                    <td>${lieu.ville}</td>
-                    <td>${lieu.etablissement} <span class="fr-badge fr-badge--sm fr-badge--purple-glycine fr-ml-1w">${lieu.type}</span></td>
-                    <td><span class="fr-badge fr-badge--info">${lieu.statut}</span></td>
-                </tr>
-            `).join('');
-        }
+        const updateDisplay = (data) => {
+            const tableBody = document.getElementById('table-lieux-body');
+            if (tableBody) {
+                tableBody.innerHTML = data.map(lieu => `
+                    <tr>
+                        <td>${lieu.ville}</td>
+                        <td>${lieu.etablissement}</td>
+                        <td><span class="fr-badge fr-badge--sm fr-badge--info">${lieu.type}</span></td>
+                        <td>${lieu.statut}</td>
+                    </tr>
+                `).join('');
+            }
+            renderMarkers(data, openLieuModal);
+        };
 
-        initMap(lieuxData, openLieuModal);
+        initMap(globalData, openLieuModal);
+        initFilters(globalData, updateDisplay);
+        updateDisplay(globalData);
 
     } catch (error) {
-        console.error("Erreur d'initialisation :", error);
-        const mapContainer = document.getElementById('map');
-        if (mapContainer) {
-            mapContainer.innerHTML = `
-                <div class="fr-alert fr-alert--error">
-                    <h3 class="fr-alert__title">Erreur de chargement</h3>
-                    <p>Impossible de charger les données JSON. Vérifiez votre serveur local.</p>
-                </div>
-            `;
-        }
+        console.error("Erreur d'initialisation du système :", error);
     }
 });

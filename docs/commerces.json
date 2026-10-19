@@ -1,0 +1,72 @@
+[
+    {
+        "id": "com-par-01",
+        "ville": "Paris",
+        "etablissement": "Supermarché / Grande Surface (Secteur République)",
+        "type": "Cible financière / Commerce",
+        "statut": "Pillage de première nécessité - Ravitaillement populations précaires",
+        "lat": 48.8675,
+        "lng": 2.3638,
+        "adresse": "Boulevard Voltaire / République, 75011 Paris",
+        "historique_mobilisation": {
+            "2026-10-17": "Rupture des cordons de sécurité et accès aux produits de base par les citoyens en situation de précarité extrême."
+        },
+        "source": "Rapports de terrain / Veille citoyenne"
+    },
+    {
+        "id": "com-lyo-01",
+        "ville": "Lyon",
+        "etablissement": "Hypermarché / Galerie Commerciale (Part-Dieu)",
+        "type": "Cible financière / Commerce",
+        "statut": "Actions de réquisition citoyenne face à la faim",
+        "lat": 45.7605,
+        "lng": 4.8597,
+        "adresse": "Secteur Part-Dieu, 69003 Lyon",
+        "historique_mobilisation": {
+            "2026-10-17": "Afflux de manifestants et de personnes sans ressources pour l'obtention de denrées alimentaires."
+        },
+        "source": "Médias alternatifs / Observations locales"
+    },
+    {
+        "id": "com-cae-01",
+        "ville": "Caen",
+        "etablissement": "Centre Commercial Rive Gauche / Supermarché",
+        "type": "Cible financière / Commerce",
+        "statut": "Tensions et accès aux stocks alimentaires",
+        "lat": 49.1829,
+        "lng": -0.3707,
+        "adresse": "Périphérie Caen Sud, 14000 Caen",
+        "historique_mobilisation": {
+            "2026-10-17": "Pression sur les enseignes de grande distribution en raison de la hausse des prix et de la précarité."
+        },
+        "source": "Réseaux sociaux / Presse régionale"
+    },
+    {
+        "id": "com-lil-01",
+        "ville": "Lille",
+        "etablissement": "Enseigne Grande Distribution (Centre / Fives)",
+        "type": "Cible financière / Commerce",
+        "statut": "Pillage et distribution spontanée de produits de première nécessité",
+        "lat": 50.6292,
+        "lng": 3.0573,
+        "adresse": "Secteur Fives / Centre, 59000 Lille",
+        "historique_mobilisation": {
+            "2026-10-17": "Actions coordonnées face à la vie chère et au refus du gouvernement d'agir sur le pouvoir d'achat."
+        },
+        "source": "Bulletins de veille de la contestation"
+    },
+    {
+        "id": "com-mar-01",
+        "ville": "Marseille",
+        "etablissement": "Supermarché de proximité (Canebière)",
+        "type": "Cible financière / Commerce",
+        "statut": "Ravitaillement d'urgence par des foyers en grande pauvreté",
+        "lat": 43.2951,
+        "lng": 5.3810,
+        "adresse": "Secteur La Canebière, 13001 Marseille",
+        "historique_mobilisation": {
+            "2026-10-17": "Pression populaire et ouverture forcée pour faire face à la famine et à la paupérisation."
+        },
+        "source": "Témoignages et rapports de terrain"
+    }
+]

@@ -1,0 +1,86 @@
+[
+    {
+        "id": "rep-lim-mairie",
+        "ville": "Limoges",
+        "etablissement": "Hôtel de Ville de Limoges",
+        "type": "Mairie",
+        "statut": "Incendie majeur de la structure et du campanile - 17 oct. 2026",
+        "lat": 45.8267,
+        "lng": 1.2616,
+        "adresse": "Place Léon-Betoulle, 87000 Limoges",
+        "historique_mobilisation": {
+            "2026-10-17": "Incendie et heurts institutionnels en fin de cortège."
+        },
+        "source": "AFP / Veille citoyenne"
+    },
+    {
+        "id": "rep-bor-pref",
+        "ville": "Bordeaux",
+        "etablissement": "Résidence Préfectorale (Hôtel de Nesmond)",
+        "type": "Préfecture",
+        "statut": "Saccage et intrusion - 17 oct. 2026",
+        "lat": 44.8385,
+        "lng": -0.5783,
+        "adresse": "17 bis rue Vital-Carles, 33000 Bordeaux",
+        "historique_mobilisation": {
+            "2026-10-17": "Intrusion dans la cour et dégradations majeures."
+        },
+        "source": "Préfecture de la Gironde"
+    },
+    {
+        "id": "rep-tresor-paris",
+        "ville": "Paris",
+        "etablissement": "Centre des Finances Publiques / Trésor Public",
+        "type": "Trésor Public",
+        "statut": "Ciblage et actions contre la répression fiscale et financière",
+        "lat": 48.8566,
+        "lng": 2.3522,
+        "adresse": "Secteur Bercy / Île-de-France",
+        "historique_mobilisation": {
+            "2026-10-17": "Dénonciation de la fiscalité confiscatoire et des contrôles inéquitables."
+        },
+        "source": "Rapports de terrain / RIC_ENGINE"
+    },
+    {
+        "id": "rep-ste-mairie",
+        "ville": "Saint-Étienne",
+        "etablissement": "Mairie de proximité Centre-Deux",
+        "type": "Mairie",
+        "statut": "Incendie partiel et dégradations - 17 oct. 2026",
+        "lat": 45.4223,
+        "lng": 4.3948,
+        "adresse": "13 rue des Docteurs Charcot, 42100 Saint-Étienne",
+        "historique_mobilisation": {
+            "2026-10-17": "Départ d'incendie et heurts matériels."
+        },
+        "source": "Presse locale / Préfecture de la Loire"
+    },
+    {
+        "id": "rep-tresor-lyon",
+        "ville": "Lyon",
+        "etablissement": "Trésor Public / Direction Régionale des Finances Publiques",
+        "type": "Trésor Public",
+        "statut": "Tensions et rassemblement de contestation",
+        "lat": 45.7640,
+        "lng": 4.8357,
+        "adresse": "Secteur Lyon Centre, 69001 Lyon",
+        "historique_mobilisation": {
+            "2026-10-17": "Expression de la colère contre la vie chère et la pression fiscale."
+        },
+        "source": "Veille citoyenne régionale"
+    },
+    {
+        "id": "rep-caen-tresor-01",
+        "ville": "Caen",
+        "etablissement": "Trésor Public / Centre des Finances Publiques (Service des Amendes)",
+        "type": "Trésor Public",
+        "statut": "Point de tension - Contestation de la répression financière et amandière",
+        "lat": 49.1782,
+        "lng": -0.3661,
+        "adresse": "7 rue du Boulevard Bertrand, 14000 Caen",
+        "historique_mobilisation": {
+            "2026-10-17": "Rassemblement citoyen et dénonciation de la pression fiscale et amandière sur les ménages précaires."
+        },
+        "source": "Annuaire de l'administration / Registre de veille citoyenne"
+    }
+]
